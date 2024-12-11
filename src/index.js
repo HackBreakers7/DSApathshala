@@ -17,7 +17,8 @@ import Profile from "views/Profile.js";
 import Index from "views/Index.js";
 
 ReactDOM.render(
-  <BrowserRouter>
+
+    <BrowserRouter>
     <Switch>
       {/* add routes with layouts */}
       <Route path="/admin" component={Admin} />
@@ -29,6 +30,7 @@ ReactDOM.render(
       {/* add redirect for first page */}
       <Redirect from="*" to="/" />
     </Switch>
-  </BrowserRouter>,
+  </BrowserRouter>, 
   document.getElementById("root")
+  
 );

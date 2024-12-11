@@ -13,6 +13,9 @@ module.exports = {
       "./src/*.html",
       "./public/**/*.js",
       "./public/*.js",
+      "./pages/**/*.{js,ts,jsx,tsx}",
+      "./components/**/*.{js,ts,jsx,tsx}",
+      "./app/**/*.{js,ts,jsx,tsx}",
     ],
     options: {
       safelist: [],
