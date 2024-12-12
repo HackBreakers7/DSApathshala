@@ -677,8 +677,6 @@ export default function Index() {
               </a> */}
             </div>
             
-
-            
             <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
               <div className="w-full lg:w-6/12 px-4">

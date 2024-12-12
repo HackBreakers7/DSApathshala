@@ -8,21 +8,23 @@ app.use(cors())
 app.use(express.json());
 
 app.post("/run", (req, res) => {
-  const code = req.body.code;
+  const {code, input} = req.body
 
   // Save the code to a temporary file
   fs.writeFileSync("temp.c", code);
+  fs.writeFileSync("input.txt",input)
 
-  // Compile and run the code
-  exec("gcc temp.c -o temp && ./temp", (err, stdout, stderr) => {
+  // Compile and run the code with input file
+  exec("gcc temp.c -o temp && ./temp < input.txt", (err, stdout, stderr) => {
     if (err || stderr) {
       res.json({ output: stderr || err.message });
     } else {
       res.json({ output: stdout });
     }
 
-    fs.unlinkSync("temp.c"); 
-    fs.unlinkSync("temp");
+    fs.unlinkSync("temp.c")
+    fs.unlinkSync("temp")
+    fs.unlinkSync("input.txt")
   });
 });
 
