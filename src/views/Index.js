@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "slick-carousel/slick/slick.css";
@@ -17,14 +16,10 @@ import new3 from "../assets/img/visualization ss.jpg";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import bootstrapImage from '../assets/img/bootstrap.jpg';
-
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-
 import VideoComponent from "../assets/videos/robo3.mp4"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 export default function Index() {
   const settings = {
     dots: true,
@@ -32,8 +27,8 @@ export default function Index() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true, // Enables automatic sliding
-    autoplaySpeed: 3000, // 3 seconds per slide
+    autoplay: true,
+    autoplaySpeed: 3000,
     centerMode: true,
     centerPadding: "20px",
   };
@@ -60,7 +55,7 @@ export default function Index() {
           className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4 mt-4"
           initial={{ x: "-100vw", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 50, duration: 1, delay: 0.5 }} // Delay added here
+          transition={{ type: "spring", stiffness: 50, duration: 1, delay: 0.5 }}
         >
           <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
               AlgoSys is a center point for students to understand difficult data structure algorithms with easy visualization and practical understanding. Whether you're just starting or looking to refine your skills, we are here to help you every step of the way.
@@ -574,7 +569,7 @@ export default function Index() {
       Features Slider
     </h3>
     <Slider {...settings}>
-      {/* Card 1 - React */}
+      
       <div className="px-4">
         <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
           <div className="relative bg-red-400 w-32 h-32 mb-4 mt-[-3rem] rounded-full overflow-hidden">
@@ -591,7 +586,7 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Card 2 - Vue */}
+      
       <div className="px-4">
         <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
           <div className="relative bg-lightBlue-400 w-32 h-32 mb-4 mt-[-3rem] rounded-full overflow-hidden">
@@ -624,7 +619,7 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Card 4 - Svelte */}
+      
       <div className="px-4">
         <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
           <div className="relative bg-purple-400 w-32 h-32 mb-4 mt-[-3rem] rounded-full overflow-hidden">
@@ -683,7 +678,7 @@ export default function Index() {
             </div>
             
 
-            {/*connection code*/}
+            
             <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
               <div className="w-full lg:w-6/12 px-4">
@@ -755,10 +750,7 @@ export default function Index() {
           </div>
         </div>
       </section>
-
-      <section className="relative block py-24 lg:pt-0 bg-blueGray-800">
-        </section>
       <Footer />
     </>
-  );
+  )
 }
