@@ -12,20 +12,15 @@ export default function FooterSmall(props) {
       >
         <div className="container mx-auto px-4">
           <hr className="mb-6 border-b-1 border-blueGray-600" />
-          <div className="flex flex-wrap items-center md:justify-between justify-center">
-            <div className="w-full md:w-4/12 px-4">
-              <div className="text-sm text-blueGray-500 font-semibold py-1 text-center md:text-left">
-                Copyright © {new Date().getFullYear()}{" "}
-                <a
-                  href="https://www.creative-tim.com?ref=nr-footer-small"
-                  className="text-white hover:text-blueGray-300 text-sm font-semibold py-1"
-                >
-                  Creative Tim
-                </a>
-              </div>
+          <div className="flex flex-wrap items-center justify-between">
+            <div className="w-full md:w-6/12 px-4 text-center md:text-left">
+              <p className="text-sm text-blueGray-500 font-semibold">
+                © {new Date().getFullYear()} Made with{" "}
+                <i className="fas fa-heart text-red-500"></i> by HackBreakers.
+              </p>
             </div>
-            <div className="w-full md:w-8/12 px-4">
-              <ul className="flex flex-wrap list-none md:justify-end  justify-center">
+            <div className="w-full md:w-6/12 px-4 text-center md:text-right">
+              <ul className="flex flex-wrap list-none justify-center md:justify-end">
                 <li>
                   <a
                     href="https://www.creative-tim.com?ref=nr-footer-small"

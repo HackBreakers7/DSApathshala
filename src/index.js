@@ -11,7 +11,7 @@ import Auth from "layouts/Auth.js";
 import Register from 'views/auth/Register';
 import VerifyOTP from 'views/auth/VerifyOTP';
 import Login from 'views/auth/Login';
-
+import LinearBinarySearch from "components/practicals/LinearBinarySearch";
 
 // views without layouts
 import Landing from "views/Landing.js";
@@ -27,6 +27,7 @@ ReactDOM.render(
       <Route path="/admin" component={Admin} />
       <Route path="/auth" component={Auth} />
       {/* add routes without layouts */}
+      <Route path="/linear" component={LinearBinarySearch}/>
       <Route path="/landing" exact component={Landing} />
       <Route path="/profile" exact component={Profile} />
       <Route path="/" exact component={Index} />
