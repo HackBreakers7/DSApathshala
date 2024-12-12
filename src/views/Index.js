@@ -660,6 +660,7 @@ export default function Index() {
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="pb-16 bg-blueGray-200 relative pt-32">
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
@@ -719,6 +720,10 @@ export default function Index() {
           </div>
         </div>
       </section>
+=======
+      <section className="relative block py-24 lg:pt-0 bg-blueGray-800">
+        </section>
+>>>>>>> 435450ced7f6bec58f387836543b84c2ebbae75d
       <Footer />
     </>
   );
