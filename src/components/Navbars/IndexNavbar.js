@@ -42,7 +42,7 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700px-3 py-4 lg:py-2 flex items-center uppercase font-bold text-sm"
-                  href="https://github.com/creativetimofficial/notus-react?ref=nr-index-navbar"
+                  href="#"
                   target="_blank"
                 >
                 Home
@@ -52,33 +52,39 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-bold"
-                  href="https://github.com/creativetimofficial/notus-react?ref=nr-index-navbar"
+                  href="#"
                   target="_blank"
                 >
-                Algorigthms
+                Algorithms
                 </a>
               </li>
 
+              <Link
+              to="/auth/login">              
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-bold"
-                  href="https://github.com/creativetimofficial/notus-react?ref=nr-index-navbar"
                   target="_blank"
                 >
                 Login
                 </a>
               </li>
+              </Link>
 
+              <Link
+              to="/auth/register">              
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-bold"
-                  href="https://github.com/creativetimofficial/notus-react?ref=nr-index-navbar"
                   target="_blank"
                 >
                 Register
                 </a>
               </li>
+              </Link>
 
+              <Link
+              to="/editor">
               <li className="flex items-center">
                 <button
                   className="bg-lightBlue-500 text-white active:bg-lightBlue-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
@@ -87,6 +93,7 @@ export default function Navbar(props) {
                   Code Editor
                 </button>
               </li>
+              </Link>
             </ul>
           </div>
         </div>
