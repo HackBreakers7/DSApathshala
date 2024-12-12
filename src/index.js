@@ -8,6 +8,10 @@ import "assets/styles/tailwind.css";
 // layouts
 import Admin from "layouts/Admin.js";
 import Auth from "layouts/Auth.js";
+import Register from 'views/auth/Register';
+import VerifyOTP from 'views/auth/VerifyOTP';
+import Login from 'views/auth/Login';
+
 
 // views without layouts
 import Landing from "views/Landing.js";
@@ -27,6 +31,10 @@ ReactDOM.render(
       <Route path="/profile" exact component={Profile} />
       <Route path="/" exact component={Index} />
       <Route path="/editor" exact component={Editor} />
+      <Route path="/register" component={Register} />
+      <Route path="/verifyotp" element={<VerifyOTP />} />
+      <Route path="/Login" component={Login} />
+
       {/* add redirect for first page */}
       <Redirect from="*" to="/" />
     </Switch>
