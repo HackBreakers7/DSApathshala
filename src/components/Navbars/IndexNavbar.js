@@ -76,6 +76,10 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-bold"
+<<<<<<< HEAD
+                  href="/auth/register"
+=======
+>>>>>>> 435450ced7f6bec58f387836543b84c2ebbae75d
                   target="_blank"
                 >
                 Register

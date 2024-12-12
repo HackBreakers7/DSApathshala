@@ -1,110 +1,89 @@
 /*eslint-disable*/
 import React from "react";
-import ReactDOM from "react-dom/client";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import main from "../assets/img/home.png"
-import new1 from "../assets/img/visualization ss.jpg";
-import reactImage from '../assets/img/react.jpg'; 
-import vueImage from '../assets/img/vue.jpg';
-import angularImage from '../assets/img/angular.jpg';
-import new2 from "../assets/img/visualization ss.jpg";
-import new3 from "../assets/img/visualization ss.jpg";
+import { motion } from "framer-motion";
+
+
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
-import bootstrapImage from '../assets/img/bootstrap.jpg';
+import main from "../assets/img/dsa.webp"
+import login from "../assets/img/login.jpg"
+import profile from "../assets/img/profile.jpg"
+import landing from "../assets/img/landing.jpg"
+import component from "../assets/img/component-btn.png"
+import compoprofile from "../assets/img/component-profile-card.png"
+import compoinfo from "../assets/img/component-info-card.png"
+import compoinfo2 from "../assets/img/component-info-2.png"
+import compobtnpink from "../assets/img/component-btn-pink.png"
+import compomenu from "../assets/img/component-menu.png"
+import documentation from "../assets/img/documentation.png"
+import sorting from "../assets/img/sortingwbg.jpg"
+import searching from "../assets/img/searching.png"
+import dynamic from "../assets/img/dynamic.png"
 
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
-import VideoComponent from "../assets/videos/robo3.mp4"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
+
+
 export default function Index() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true, // Enables automatic sliding
-    autoplaySpeed: 3000, // 3 seconds per slide
-    centerMode: true,
-    centerPadding: "20px",
+  // Animation variants for Framer Motion
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
   };
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  
   return (
     <>
-      <IndexNavbar fixed />              
+      <IndexNavbar fixed />
       <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
-      <div className="container mx-auto items-center flex flex-wrap">
-        {/* Text Section */}
-          <div className="pt-32 sm:pt-0">
-            <motion.div
-            className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4"
-            initial={{ x: "-100vw", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 50, duration: 1 }}
-          > 
-            <h2 className="font-semibold text-4xl text-blueGray-600">
-              AlgoSys - With easy visualization, everything is easy
-            </h2>
-            </motion.div>
-            <motion.div
-          className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4 mt-4"
-          initial={{ x: "-100vw", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 50, duration: 1, delay: 0.5 }} // Delay added here
-        >
-          <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-              AlgoSys is a center point for students to understand difficult data structure algorithms with easy visualization and practical understanding. Whether you're just starting or looking to refine your skills, we are here to help you every step of the way.
-            </p>
-        </motion.div>
-        <motion.div
-          className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4 mt-12"
-          initial={{ x: "-100vw", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 50, duration: 1, delay: 1 }} // Delay increased here
-        >
-          <div className="mt-12">
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index"
-                target="_blank"
-                className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                rel="noreferrer"
-              >
-                Get started
-              </a>
-              <a
-                href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
-                className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Github Star
-              </a>
+        <div className="container mx-auto items-center flex flex-wrap">
+          <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
+            <div className="pt-32 sm:pt-0">
+              <h2 className="font-semibold text-4xl text-blueGray-600">
+                Learn DSA Easily
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
+                Notus React is Free and Open Source. It does not change any of
+                the CSS from{" "}
+                <a
+                  href="https://tailwindcss.com/?ref=creativetim"
+                  className="text-blueGray-600"
+                  target="_blank"
+                >
+                  Tailwind CSS
+                </a>
+                . It features multiple HTML elements and it comes with dynamic
+                components for ReactJS, Vue and Angular.
+              </p>
+              <div className="mt-12">
+                <a
+                  href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index"
+                  target="_blank"
+                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150 "
+                >
+                  Get started
+                </a>
+                <a
+                  href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
+                  className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                  target="_blank"
+                >
+                  Github Star
+                </a>
+              </div>
             </div>
-        </motion.div>   
+          </div>
         </div>
-        
-        <motion.img
-        className="absolute top-4 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
-        src={main}
-        alt="..."
-        initial={{ x: "100vw", opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 50, duration: 1 }}
-      />
-      </div>
+
+        <img
+          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
+          src={main}
+        />
       </section>
 
-      <section className="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
+      <section className="mt-48 md:mt-40 pb-40 relative" style={{backgroundColor:"#f1edff"}}>
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
           style={{ transform: "translateZ(0)" }}
@@ -119,155 +98,226 @@ export default function Index() {
             y="0"
           >
             <polygon
-              className="text-blueGray-100 fill-current"
+              // className="text-blueGray-100 fill-current"
               points="2560 0 2560 100 0 100"
+              fill="#f1edff"
             ></polygon>
           </svg>
         </div>
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center">
-            <div className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
-              <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-lightBlue-500">
-                <img
-                  alt="..."
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
-                  className="w-full align-middle rounded-t-lg"
-                />
-                <blockquote className="relative p-8 mb-4">
-                  <svg
-                    preserveAspectRatio="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 583 95"
-                    className="absolute left-0 w-full block h-95-px -top-94-px"
-                  >
-                    <polygon
-                      points="-30,95 583,95 583,65"
-                      className="text-lightBlue-500 fill-current"
-                    ></polygon>
-                  </svg>
-                  <h4 className="text-xl font-bold text-white">
-                    Great for your awesome project
-                  </h4>
-                  <p className="text-md font-light mt-2 text-white">
-                    Putting together a page has never been easier than matching
-                    together pre-made components. From landing pages
-                    presentation to login areas, you can easily customise and
-                    built your pages.
-                  </p>
-                </blockquote>
-              </div>
-            </div>
+            {[1].map((item, index) => (
+              <motion.div
+                key={index}
+                className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32"
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
+              <Link to="/auth/login">
+                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg" style={{backgroundColor: "#815bff" }}>
+                  <img
+                    alt="..."
+                    src={sorting}
+                    className="w-full align-middle rounded-t-lg"
+                  />
+                  <blockquote className="relative p-8 mb-5">
+                    <svg
+                      preserveAspectRatio="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 583 95"
+                      className="absolute left-0 w-full block h-95-px -top-94-px"
+                    >
+                      <polygon
+                        points="-30,95 583,95 583,65"
+                        fill="#815bff"
+                        // className="text-lightBlue-500 fill-current"
+                      ></polygon>
+                    </svg>
+                    <h4 className="text-xl font-bold text-white">
+                      Sorting
+                    </h4>
+                    <p className="text-md font-light mt-2 text-white">
+                    Sorting in DSA is the process of arranging the elements of a data structure (like an array or list) 
+                    in a specific order, typically ascending or descending.
+                    </p>
+                  </blockquote>
+                </div>
+              </Link>
+              </motion.div>
+            ))}
 
-            <div className="w-full md:w-6/12 px-4">
-              <div className="flex flex-wrap">
-                <div className="w-full md:w-6/12 px-4">
-                  <div className="relative flex flex-col mt-4">
-                    <div className="px-4 py-5 flex-auto">
-                      <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-sitemap"></i>
-                      </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        CSS Components
-                      </h6>
-                      <p className="mb-4 text-blueGray-500">
-                        Notus React comes with a huge number of Fully Coded CSS
-                        components.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="relative flex flex-col min-w-0">
-                    <div className="px-4 py-5 flex-auto">
-                      <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-drafting-compass"></i>
-                      </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        JavaScript Components
-                      </h6>
-                      <p className="mb-4 text-blueGray-500">
-                        We also feature many dynamic components for React,
-                        NextJS, Vue and Angular.
-                      </p>
-                    </div>
-                  </div>
+            {[1].map((item, index) => (
+              <motion.div
+                key={index}
+                className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32"
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
+              <Link to="/auth/login">
+                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg " style={{backgroundColor: "#815bff" }}>
+                  <img
+                    alt="..."
+                    src={searching}
+                    className="w-full align-middle rounded-t-lg"
+                  />
+                  <blockquote className="relative p-8 mb-12">
+                    <svg
+                      preserveAspectRatio="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 583 95"
+                      className="absolute left-0 w-full block h-95-px -top-94-px"
+                    >
+                      <polygon
+                        points="-30,95 583,95 583,65"
+                        fill="#815bff"
+                      ></polygon>
+                    </svg>
+                    <h4 className="text-xl font-bold text-white">
+                      Searching
+                    </h4>
+                    <p className="text-md font-light mt-2 text-white">
+                      In DSA, searching is the process of finding the location of a specific element in a data structure,
+                       such as an array, linked list, or tree. The goal is to determine whether the element exists and, if so, retrieve its position. 
+                    </p>
+                  </blockquote>
                 </div>
-                <div className="w-full md:w-6/12 px-4">
-                  <div className="relative flex flex-col min-w-0 mt-4">
-                    <div className="px-4 py-5 flex-auto">
-                      <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-newspaper"></i>
-                      </div>
-                      <h6 className="text-xl mb-1 font-semibold">Pages</h6>
-                      <p className="mb-4 text-blueGray-500">
-                        This extension also comes with 3 sample pages. They are
-                        fully coded so you can start working instantly.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="relative flex flex-col min-w-0">
-                    <div className="px-4 py-5 flex-auto">
-                      <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-file-alt"></i>
-                      </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        Documentation
-                      </h6>
-                      <p className="mb-4 text-blueGray-500">
-                        Built by developers for developers. You will love how
-                        easy is to to work with Notus React.
-                      </p>
-                    </div>
-                  </div>
+              </Link>
+              </motion.div>
+            ))}
+
+            {[1].map((item, index) => (
+              <motion.div
+                key={index}
+                className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32"
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
+              <Link to="/auth/login">
+                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg" style={{backgroundColor: "#815bff" }}>
+                  <img
+                    alt="..."
+                    src={dynamic}
+                    className="w-full align-middle rounded-t-lg"
+                  />
+                  <blockquote className="relative p-8 mb-0">
+                    <svg
+                      preserveAspectRatio="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 583 95"
+                      className="absolute left-0 w-full block h-95-px -top-94-px"
+                    >
+                      <polygon
+                        points="-30,95 583,95 583,65"
+                        fill="#815bff"
+                      ></polygon>
+                    </svg>
+                    <h4 className="text-xl font-bold text-white">
+                      Dynamic Programming
+                    </h4>
+                    <p className="text-md font-light mt-2 text-white">
+                      Dynamic Programming (DP) in DSA is a problem-solving technique used to solve complex
+                      problems by breaking them down into smaller overlapping subproblems, solving each subproblem once, 
+                      and storing the results (memoization or tabulation) to avoid redundant computations.                   
+                    </p>
+                  </blockquote>
                 </div>
-              </div>
-            </div>
-          </div>
+              </Link>
+              </motion.div>
+            ))}
+         </div>
         </div>
 
         <div className="container mx-auto overflow-hidden pb-20">
-  <div className="flex flex-wrap items-start">
-{/* About Us Section */}
-<motion.div
-          ref={ref}
-          className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto"
-          initial={{ opacity: 0, x: -50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.2, ease: "easeOut" }}
-        >
-          <h3 className="text-3xl mb-2 font-semibold leading-normal text-blue-600">About Us</h3>
-          <p className="mt-4 text-blueGray-600">
-            Our platform makes learning programming simple and effective, blending theory,
-            practice, and assessments to guide you at every step.
-          </p>
-          <p className="mt-2 text-blueGray-600">
-            With top-notch tools, 24/7 support, and an intuitive interface, we turn complex
-            concepts into easy-to-grasp lessons.
-          </p>
-          <p className="mt-2 text-blueGray-600">
-            Start your journey with us today, and take the first step toward becoming a confident coding expert!
-          </p>
-        </motion.div>
+          <div className="flex flex-wrap items-center">
+            <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
+              <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                <i className="fas fa-sitemap text-xl"></i>
+              </div>
+              <h3 className="text-3xl mb-2 font-semibold leading-normal">
+                CSS Components
+              </h3>
+              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
+                Every element that you need in a product comes built in as a
+                component. All components fit perfectly with each other and can
+                have different colours.
+              </p>
+              <div className="block pb-6">
+                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+                  Buttons
+                </span>
+                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+                  Inputs
+                </span>
+                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+                  Labels
+                </span>
+                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+                  Menus
+                </span>
+                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+                  Navbars
+                </span>
+                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+                  Pagination
+                </span>
+                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+                  Progressbars
+                </span>
+                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+                  Typography
+                </span>
+              </div>
+              <a
+                href="https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=nr-index"
+                target="_blank"
+                className="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150"
+              >
+                View All{" "}
+                <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
+              </a>
+            </div>
 
-
-    {/* Video Section */}
-    <div className="w-full md:w-6/12 px-8 mr-auto ml-auto mt-12 pt-4">
-      <div className="relative flex flex-col items-center justify-center"style={{ top: '0px' }}>
-        {/* Circular Video Wrapper */}
-        <div className="w-64 h-64 overflow-hidden shadow-lg">
-          <video
-            className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-          >
-            <source src={VideoComponent} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
+            <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mt-32">
+              <div className="relative flex flex-col min-w-0 w-full mb-6 mt-48 md:mt-0">
+                <img
+                  alt="..."
+                  src={component}
+                  className="w-full align-middle rounded absolute shadow-lg max-w-100-px z-3 left-145-px -top-29-px"
+                />
+                <img
+                  alt="..."
+                  src={compoprofile}
+                  className="w-full align-middle rounded-lg absolute shadow-lg -top-160-px left-260-px max-w-210-px"
+                />
+                <img
+                  alt="..."
+                  src={compoinfo}
+                  className="w-full align-middle rounded-lg absolute shadow-lg max-w-180-px -top-225-px left-40-px z-2"
+                />
+                <img
+                  alt="..."
+                  src={compoinfo2}
+                  className="w-full align-middle rounded-lg absolute shadow-2xl max-w-200-px -left-50-px top-25-px"
+                />
+                <img
+                  alt="..."
+                  src={compomenu}
+                  className="w-full align-middle rounded absolute shadow-lg max-w-580-px -left-20-px top-210-px"
+                />
+                <img
+                  alt="..."
+                  src={compobtnpink}
+                  className="w-full align-middle rounded absolute shadow-xl max-w-120-px left-195-px top-95-px"
+                />
+              </div>
+            </div>
+          </div>
 
           <div className="flex flex-wrap items-center pt-32">
             <div className="w-full md:w-6/12 px-4 mr-auto ml-auto mt-32">
@@ -494,7 +544,7 @@ export default function Index() {
                   transform:
                     "scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg)",
                 }}
-                src={require("assets/img/documentation.png").default}
+                src={documentation}
               />
             </div>
           </div>
@@ -502,9 +552,11 @@ export default function Index() {
 
         <div className="justify-center text-center flex flex-wrap mt-24">
           <div className="w-full md:w-6/12 px-12 md:px-4">
-            <h2 className="font-semibold text-4xl">Explore Our Gallery</h2>
+            <h2 className="font-semibold text-4xl">Beautiful Example Pages</h2>
             <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
-            "Unlock the beauty of data structures, one glimpse at a time."
+              Notus React is a completly new product built using our past
+              experience in web templates. Take the examples we made for you and
+              start playing with them.
             </p>
           </div>
         </div>
@@ -517,14 +569,14 @@ export default function Index() {
               <div className="flex flex-wrap">
                 <div className="w-full lg:w-4/12 px-4">
                   <h5 className="text-xl font-semibold pb-4 text-center">
-                    Searching
+                    Login Page
                   </h5>
                   <Link to="/auth/login">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                       <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src={new1}
+                        src={login}
                       />
                     </div>
                   </Link>
@@ -532,15 +584,14 @@ export default function Index() {
 
                 <div className="w-full lg:w-4/12 px-4">
                   <h5 className="text-xl font-semibold pb-4 text-center">
-                    Sorting
+                    Profile Page
                   </h5>
                   <Link to="/profile">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                       <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src={new2}
-
+                        src={profile}
                       />
                     </div>
                   </Link>
@@ -548,15 +599,14 @@ export default function Index() {
 
                 <div className="w-full lg:w-4/12 px-4">
                   <h5 className="text-xl font-semibold pb-4 text-center">
-                    Dynamic Programming
+                    Landing Page
                   </h5>
                   <Link to="/landing">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                       <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src={new3}
-
+                        src={landing}
                       />
                     </div>
                   </Link>
@@ -567,85 +617,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Card Slider Section */}
-      <section className="py-20 bg-blueGray-200">
-  <div className="container mx-auto">
-    <h3 className="text-3xl font-semibold text-center mb-8 font-roboto">
-      Features Slider
-    </h3>
-    <Slider {...settings}>
-      {/* Card 1 - React */}
-      <div className="px-4">
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
-          <div className="relative bg-red-400 w-32 h-32 mb-4 mt-[-3rem] rounded-full overflow-hidden">
-            <img
-              src={reactImage}
-              alt="React Logo"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <h3 className="text-xl font-semibold font-roboto">React</h3>
-          <p className="text-gray-500 mt-2 font-roboto">
-            Build interactive UIs with React.
-          </p>
-        </div>
-      </div>
-
-      {/* Card 2 - Vue */}
-      <div className="px-4">
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
-          <div className="relative bg-lightBlue-400 w-32 h-32 mb-4 mt-[-3rem] rounded-full overflow-hidden">
-            <img
-              src={vueImage}
-              alt="Vue Logo"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <h3 className="text-xl font-semibold font-roboto">Vue</h3>
-          <p className="text-gray-500 mt-2 font-roboto">
-            Lightweight and progressive framework for building UIs.
-          </p>
-        </div>
-      </div>
-
-      <div className="px-4">
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
-          <div className="relative bg-purple-400 w-32 h-32 mb-4 mt-[-2rem] rounded-full overflow-hidden">
-            <img
-            src={angularImage}
-            alt="Angular Logo"
-            className="w-full h-full object-cover"
-          />
-          </div>
-          <h3 className="text-xl font-semibold font-roboto">Angular</h3>
-          <p className="text-gray-500 mt-2 font-roboto">
-            A modern, fast framework that compiles away at build time.
-          </p>
-        </div>
-      </div>
-
-      {/* Card 4 - Svelte */}
-      <div className="px-4">
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
-          <div className="relative bg-purple-400 w-32 h-32 mb-4 mt-[-3rem] rounded-full overflow-hidden">
-            <img
-              src={bootstrapImage}
-              alt="Bootstrap Logo"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <h3 className="text-xl font-semibold font-roboto">Bootstrap</h3>
-          <p className="text-gray-500 mt-2 font-roboto">
-            A modern, fast framework that compiles away at build time.
-          </p>
-        </div>
-      </div>
-
-      
-    </Slider>
-  </div>
-</section>
-
       <section className="py-20 bg-blueGray-600 overflow-hidden">
         <div className="container mx-auto pb-64">
           <div className="flex flex-wrap justify-center">
@@ -653,10 +624,10 @@ export default function Index() {
               <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                 <i className="fas fa-code-branch text-xl"></i>
               </div>
-              {/* <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
+              <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
                 Open Source
-              </h3> */}
-              {/* <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-400">
+              </h3>
+              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-400">
                 Since{" "}
                 <a
                   href="https://tailwindcss.com/?ref=creativetim"
@@ -668,96 +639,91 @@ export default function Index() {
                 is an open source project we wanted to continue this movement
                 too. You can give this version a try to feel the design and also
                 test the quality of the code!
-              </p> */}
-              {/* <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-400">
+              </p>
+              <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-400">
                 Get it free on Github and please help us spread the news with a
                 Star!
-              </p> */}
-              {/* <a
+              </p>
+              <a
                 href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
                 target="_blank"
                 className="github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
               >
                 Github Star
-              </a> */}
+              </a>
             </div>
-            
 
-            {/*connection code*/}
-            <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
-              <div className="w-full lg:w-6/12 px-4">
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
-                  <div className="flex-auto p-5 lg:p-10">
-                    <h4 className="text-2xl font-semibold">
-                      Want to work with us?
-                    </h4>
-                    <p className="leading-relaxed mt-1 mb-4 text-blueGray-500">
-                      Complete this form and we will get back to you in 24
-                      hours.
-                    </p>
-                    <div className="relative w-full mb-3 mt-8">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="full-name"
-                      >
-                        Full Name
-                      </label>
-                      <input
-                        type="text"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Full Name"
-                      />
-                    </div>
-
-                    <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="email"
-                      >
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Email"
-                      />
-                    </div>
-
-                    <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="message"
-                      >
-                        Message
-                      </label>
-                      <textarea
-                        rows="4"
-                        cols="80"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                        placeholder="Type a message..."
-                      />
-                    </div>
-                    <div className="text-center mt-6">
-                      <button
-                        className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                        type="button"
-                      >
-                        Send Message
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="w-full md:w-4/12 px-4 mr-auto ml-auto mt-32 relative">
+              <i className="fab fa-github text-blueGray-700 absolute -top-150-px -right-100 left-auto opacity-80 text-55"></i>
             </div>
-          </div>
-
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+      <section className="pb-16 bg-blueGray-200 relative pt-32">
+        <div
+          className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
+          style={{ transform: "translateZ(0)" }}
+        >
+          <svg
+            className="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              className="text-blueGray-200 fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+
+        <div className="container mx-auto">
+          <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10">
+            <div className="w-full text-center lg:w-8/12">
+              <p className="text-4xl text-center">
+                <span role="img" aria-label="love">
+                  😍
+                </span>
+              </p>
+              <h3 className="font-semibold text-3xl">
+                Do you love this Starter Kit?
+              </h3>
+              <p className="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4">
+                Cause if you do, it can be yours now. Hit the buttons below to
+                navigate to get the Free version for your next project. Build a
+                new web app or give an old project a new look!
+              </p>
+              <div className="sm:block flex flex-col mt-10">
+                <a
+                  href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index"
+                  target="_blank"
+                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                >
+                  Get started
+                </a>
+                <a
+                  href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
+                  target="_blank"
+                  className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
+                >
+                  <i className="fab fa-github text-lg mr-1"></i>
+                  <span>Help With a Star</span>
+                </a>
+              </div>
+              <div className="text-center mt-16"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+=======
       <section className="relative block py-24 lg:pt-0 bg-blueGray-800">
         </section>
+>>>>>>> 435450ced7f6bec58f387836543b84c2ebbae75d
       <Footer />
     </>
   );
