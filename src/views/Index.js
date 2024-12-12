@@ -689,7 +689,6 @@ export default function Index() {
       </section>
 
       <section className="relative block py-24 lg:pt-0 bg-blueGray-800">
-        Hi there
         </section>
       <Footer />
     </>
