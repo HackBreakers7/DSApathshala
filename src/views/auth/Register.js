@@ -1,5 +1,7 @@
 import React from "react";
 
+
+
 export default function Register() {
   return (
     <>
@@ -71,6 +73,20 @@ export default function Register() {
                       placeholder="Email"
                     />
                   </div>
+  
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      User Name 
+                    </label>
+                    <input
+                      type="email"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                      placeholder="User Name"
+                    />
+                  </div>
 
                   <div className="relative w-full mb-3">
                     <label
@@ -84,6 +100,42 @@ export default function Register() {
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                       placeholder="Password"
                     />
+                  </div>
+
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Confirm Password
+                    </label>
+                    <input
+                      type="password"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                      placeholder="Comfirm Password"
+                    />
+                  </div>
+
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="class-dropdown"
+                    >
+                      Class
+                    </label>
+                    <select
+                      id="class-dropdown"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    >
+                      <option value="" disabled selected hidden>
+                        Select Class
+                      </option>
+                      <option value="">None</option>
+                      <option value="first-year">First Year</option>
+                      <option value="second-year">Second Year</option>
+                      <option value="third-year">Third Year</option>
+                      <option value="fourth-year">Fourth Year</option>
+                    </select>
                   </div>
 
                   <div>
