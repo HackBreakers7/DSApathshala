@@ -1,15 +1,44 @@
 /*eslint-disable*/
 import React from "react";
+import ReactDOM from "react-dom/client";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import main from "../assets/img/home.png"
-import new1 from "../assets/img/visualization ss.jpg"
-import new2 from "../assets/img/visualization ss.jpg"
-import new3 from "../assets/img/visualization ss.jpg"
+import new1 from "../assets/img/visualization ss.jpg";
+import reactImage from '../assets/img/react.jpg'; 
+import vueImage from '../assets/img/vue.jpg';
+import angularImage from '../assets/img/angular.jpg';
+import new2 from "../assets/img/visualization ss.jpg";
+import new3 from "../assets/img/visualization ss.jpg";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
-import {motion } from "framer-motion"
+import bootstrapImage from '../assets/img/bootstrap.jpg';
 
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
+import VideoComponent from "../assets/videos/robo3.mp4"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default function Index() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true, // Enables automatic sliding
+    autoplaySpeed: 3000, // 3 seconds per slide
+    centerMode: true,
+    centerPadding: "20px",
+  };
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <>
       <IndexNavbar fixed />              
@@ -194,91 +223,51 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="container mx-auto overflow-hidden pb-20 ">
-          <div className="flex flex-wrap items-center">
-            <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
-              <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                <i className="fas fa-sitemap text-xl"></i>
-              </div>
-              <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                CSS Components
-              </h3>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                Every element that you need in a product comes built in as a
-                component. All components fit perfectly with each other and can
-                have different colours.
-              </p>
-              <div className="block pb-6">
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Buttons
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Inputs
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Labels
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Menus
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Navbars
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Pagination
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Progressbars
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Typography
-                </span>
-              </div>
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=nr-index"
-                target="_blank"
-                className="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150"
-              >
-                View All{" "}
-                <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
-              </a>
-            </div>
+        <div className="container mx-auto overflow-hidden pb-20">
+  <div className="flex flex-wrap items-start">
+{/* About Us Section */}
+<motion.div
+          ref={ref}
+          className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto"
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+        >
+          <h3 className="text-3xl mb-2 font-semibold leading-normal text-blue-600">About Us</h3>
+          <p className="mt-4 text-blueGray-600">
+            Our platform makes learning programming simple and effective, blending theory,
+            practice, and assessments to guide you at every step.
+          </p>
+          <p className="mt-2 text-blueGray-600">
+            With top-notch tools, 24/7 support, and an intuitive interface, we turn complex
+            concepts into easy-to-grasp lessons.
+          </p>
+          <p className="mt-2 text-blueGray-600">
+            Start your journey with us today, and take the first step toward becoming a confident coding expert!
+          </p>
+        </motion.div>
 
-            <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mt-32">
-              <div className="relative flex flex-col min-w-0 w-full mb-6 mt-48 md:mt-0">
-                <img
-                  alt="..."
-                  src={require("assets/img/component-btn.png").default}
-                  className="w-full align-middle rounded absolute shadow-lg max-w-100-px z-3 left-145-px -top-29-px"
-                />
-                <img
-                  alt="..."
-                  src={require("assets/img/component-profile-card.png").default}
-                  className="w-full align-middle rounded-lg absolute shadow-lg -top-160-px left-260-px max-w-210-px"
-                />
-                <img
-                  alt="..."
-                  src={require("assets/img/component-info-card.png").default}
-                  className="w-full align-middle rounded-lg absolute shadow-lg max-w-180-px -top-225-px left-40-px z-2"
-                />
-                <img
-                  alt="..."
-                  src={require("assets/img/component-info-2.png").default}
-                  className="w-full align-middle rounded-lg absolute shadow-2xl max-w-200-px -left-50-px top-25-px"
-                />
-                <img
-                  alt="..."
-                  src={require("assets/img/component-menu.png").default}
-                  className="w-full align-middle rounded absolute shadow-lg max-w-580-px -left-20-px top-210-px"
-                />
-                <img
-                  alt="..."
-                  src={require("assets/img/component-btn-pink.png").default}
-                  className="w-full align-middle rounded absolute shadow-xl max-w-120-px left-195-px top-95-px"
-                />
-              </div>
-            </div>
-          </div>
+
+    {/* Video Section */}
+    <div className="w-full md:w-6/12 px-8 mr-auto ml-auto mt-12 pt-4">
+      <div className="relative flex flex-col items-center justify-center"style={{ top: '0px' }}>
+        {/* Circular Video Wrapper */}
+        <div className="w-64 h-64 overflow-hidden shadow-lg">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+          >
+            <source src={VideoComponent} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
           <div className="flex flex-wrap items-center pt-32">
             <div className="w-full md:w-6/12 px-4 mr-auto ml-auto mt-32">
@@ -577,6 +566,85 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Card Slider Section */}
+      <section className="py-20 bg-blueGray-200">
+  <div className="container mx-auto">
+    <h3 className="text-3xl font-semibold text-center mb-8 font-roboto">
+      Features Slider
+    </h3>
+    <Slider {...settings}>
+      {/* Card 1 - React */}
+      <div className="px-4">
+        <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
+          <div className="relative bg-red-400 w-32 h-32 mb-4 mt-[-3rem] rounded-full overflow-hidden">
+            <img
+              src={reactImage}
+              alt="React Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <h3 className="text-xl font-semibold font-roboto">React</h3>
+          <p className="text-gray-500 mt-2 font-roboto">
+            Build interactive UIs with React.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 2 - Vue */}
+      <div className="px-4">
+        <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
+          <div className="relative bg-lightBlue-400 w-32 h-32 mb-4 mt-[-3rem] rounded-full overflow-hidden">
+            <img
+              src={vueImage}
+              alt="Vue Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <h3 className="text-xl font-semibold font-roboto">Vue</h3>
+          <p className="text-gray-500 mt-2 font-roboto">
+            Lightweight and progressive framework for building UIs.
+          </p>
+        </div>
+      </div>
+
+      <div className="px-4">
+        <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
+          <div className="relative bg-purple-400 w-32 h-32 mb-4 mt-[-2rem] rounded-full overflow-hidden">
+            <img
+            src={angularImage}
+            alt="Angular Logo"
+            className="w-full h-full object-cover"
+          />
+          </div>
+          <h3 className="text-xl font-semibold font-roboto">Angular</h3>
+          <p className="text-gray-500 mt-2 font-roboto">
+            A modern, fast framework that compiles away at build time.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 4 - Svelte */}
+      <div className="px-4">
+        <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
+          <div className="relative bg-purple-400 w-32 h-32 mb-4 mt-[-3rem] rounded-full overflow-hidden">
+            <img
+              src={bootstrapImage}
+              alt="Bootstrap Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <h3 className="text-xl font-semibold font-roboto">Bootstrap</h3>
+          <p className="text-gray-500 mt-2 font-roboto">
+            A modern, fast framework that compiles away at build time.
+          </p>
+        </div>
+      </div>
+
+      
+    </Slider>
+  </div>
+</section>
 
       <section className="py-20 bg-blueGray-600 overflow-hidden">
         <div className="container mx-auto pb-64">
