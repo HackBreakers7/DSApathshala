@@ -1,8 +1,62 @@
 import React from "react";
-
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import UserDropdown from "components/Dropdowns/UserDropdown.js";
 
 export default function Navbar() {
+  const [searchQuery, setSearchQuery] = useState("")
+  const [filteredSuggestions, setFilteredSuggestions] = useState([])
+  const history = useHistory()
+
+  const searchItems = [
+    "linear search",
+    "binary search",
+    "bubble sort",
+    "selection sort",
+  ]
+
+  const searchMap = {
+    "linear search": "/profile",
+    "binary search": "/binary-search",
+    "bubble sort": "/bubble-sort",
+    "selection sort": "/selection-sort",
+  }
+
+  const handleSearch = () =>{
+    const path = searchMap[searchQuery.toLowerCase()]
+    if(path){
+      history.push(path)
+    }
+    else{
+      alert("Page not found for this search!")
+    }
+  }
+
+  const handleKeyDown = (e) =>{
+    if(e.key === 'Enter'){
+      handleSearch()
+    }
+  }
+
+  const handleInputChange = (e) =>{
+    const query = e.target.value 
+    setSearchQuery(query)
+
+    if(query){
+      const filtered = searchItems.filter(items => items.toLowerCase().includes(query.toLowerCase()))
+      setFilteredSuggestions(filtered)
+    }
+    else{
+      setFilteredSuggestions([])
+    }
+  }
+
+  const handleSuggestionClick = (suggestion)=>{
+    const path = searchMap[suggestion.toLowerCase()]
+    history.push(path)
+    setFilteredSuggestions([])
+  }
+
   return (
     <>
       {/* Navbar */}
@@ -26,7 +80,23 @@ export default function Navbar() {
                 type="text"
                 placeholder="Search here..."
                 className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
+                value={searchQuery}
+                onChange={handleInputChange}
+                onKeyDown={handleKeyDown}
               />
+              {filteredSuggestions.length > 0 && (
+                <ul className="absolute mt-16 bg-white border rounded shadow-lg w-full">
+                  {filteredSuggestions.map((suggestion, index)=>(
+                    <li 
+                      className="px-4 py-2 cursor-pointer hover:bg-gray-200"
+                      key={index}
+                      onClick={()=>handleSuggestionClick(suggestion)}
+                      >
+                        {suggestion}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </form>
           {/* User */}
