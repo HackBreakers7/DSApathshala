@@ -52,28 +52,28 @@ export default function Index() {
             initial={{ x: "-100vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 50, duration: 1 }}
-          > 
+            > 
             <h2 className="font-semibold text-4xl text-blueGray-600">
               AlgoSys - With easy visualization, everything is easy
             </h2>
             </motion.div>
             <motion.div
-          className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4 mt-4"
-          initial={{ x: "-100vw", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 50, duration: 1, delay: 0.5 }}
-        >
-          <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-              AlgoSys is a center point for students to understand difficult data structure algorithms with easy visualization and practical understanding. Whether you're just starting or looking to refine your skills, we are here to help you every step of the way.
-            </p>
-        </motion.div>
-        <motion.div
-          className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4 mt-12"
-          initial={{ x: "-100vw", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 50, duration: 1, delay: 1 }} // Delay increased here
-        >
-          <div className="mt-12">
+            className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4 mt-4"
+            initial={{ x: "-100vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 50, duration: 1, delay: 0.5 }}
+            >
+           <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
+               AlgoSys is a center point for students to understand difficult data structure algorithms with easy visualization and practical understanding. Whether you're just starting or looking to refine your skills, we are here to help you every step of the way.
+             </p>
+            </motion.div>
+            <motion.div
+            className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4 mt-12"
+            initial={{ x: "-100vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 50, duration: 1, delay: 1 }} // Delay increased here
+            >
+            <div className="mt-12">
               <a
                 href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index"
                 target="_blank"
@@ -90,10 +90,9 @@ export default function Index() {
               >
                 Github Star
               </a>
-            </div>
-        </motion.div>   
-        </div>
-        
+             </div>
+            </motion.div>   
+          </div>
         <motion.img
         className="absolute top-4 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
         src={main}
