@@ -130,7 +130,7 @@ export default function Footer() {
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-blueGray-500 font-semibold py-1">
                 <p style={{ fontSize: "20px" }}>
-                  Made with <i className="fas fa-heart text-red-500"></i> by HackBreakers!
+                  Made with <i className="fas fa-heart"></i> by HackBreakers!
                 </p>
               </div>
             </div>

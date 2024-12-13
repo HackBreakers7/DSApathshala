@@ -33,6 +33,12 @@ export default function Index() {
     centerPadding: "20px",
   };
   const ref = useRef(null);
+  const [faqIndex, setFaqIndex] = React.useState(null);
+
+  const toggleAnswer = (index) => {
+    setFaqIndex(faqIndex === index ? null : index);
+  };
+
   const isInView = useInView(ref, { once: true });
   return (
     <>
@@ -504,7 +510,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-
       <section className="block relative z-1 bg-blueGray-600">
         <div className="container mx-auto">
           <div className="justify-center flex flex-wrap">
@@ -556,198 +561,203 @@ export default function Index() {
                     </div>
                   </Link>
                 </div>
-              </div>
+
+                <div className="w-full lg:w-4/12 px-4">
+                  <h5 className="text-xl font-semibold pb-4 text-center">
+                    Dynamic Programming
+                  </h5>
+                  <Link to="/landing">
+                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <img
+                        alt="..."
+                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        src={new3}
+
+                      />
+                    </div>
+                  </Link>
+                </div>
+
+                <div className="w-full lg:w-4/12 px-4">
+                  <h5 className="text-xl font-semibold pb-4 text-center">
+                    Dynamic Programming
+                  </h5>
+                  <Link to="/landing">
+                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <img
+                        alt="..."
+                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        src={new3}
+
+                      />
+                    </div>
+                  </Link>
+                </div>
+
+                <div className="w-full lg:w-4/12 px-4">
+                  <h5 className="text-xl font-semibold pb-4 text-center">
+                    Dynamic Programming
+                  </h5>
+                  <Link to="/landing">
+                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <img
+                        alt="..."
+                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        src={new3}
+                        />
+                    </div>
+                  </Link>
+                </div>
+            
+             </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Card Slider Section */}
-      <section className="py-20 bg-blueGray-200">
-  <div className="container mx-auto">
-    <h3 className="text-3xl font-semibold text-center mb-8 font-roboto">
-      Features Slider
-    </h3>
-    <Slider {...settings}>
-      
-      <div className="px-4">
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
-          <div className="relative bg-red-400 w-32 h-32 mb-4 mt-[-3rem] rounded-full overflow-hidden">
-            <img
-              src={reactImage}
-              alt="React Logo"
-              className="w-full h-full object-cover"
-            />
+  <section className="py-20 bg-blueGray-600 overflow-hidden">
+  <div className="container mx-auto pb-64">
+    <div className="flex flex-wrap lg:flex-nowrap justify-center">
+      {/* Send Message Form */}
+      <div className="w-full lg:w-6/12 px-12 md:px-4">
+        <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
+          <div className="flex-auto p-5 lg:p-10">
+            <h4 className="text-2xl font-semibold">Want to work with us?</h4>
+            <p className="leading-relaxed mt-1 mb-4 text-blueGray-500">
+              Complete this form and we will get back to you in 24 hours.
+            </p>
+            <div className="relative w-full mb-3 mt-8">
+              <label
+                className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                htmlFor="full-name"
+              >
+                Full Name
+              </label>
+              <input
+                type="text"
+                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                placeholder="Full Name"
+              />
+            </div>
+
+            <div className="relative w-full mb-3">
+              <label
+                className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                htmlFor="email"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                placeholder="Email"
+              />
+            </div>
+
+            <div className="relative w-full mb-3">
+              <label
+                className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                htmlFor="message"
+              >
+                Message
+              </label>
+              <textarea
+                rows="4"
+                cols="80"
+                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                placeholder="Type a message..."
+              />
+            </div>
+            <div className="text-center mt-6">
+              <button
+                className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                type="button"
+              >
+                Send Message
+              </button>
+            </div>
           </div>
-          <h3 className="text-xl font-semibold font-roboto">React</h3>
-          <p className="text-gray-500 mt-2 font-roboto">
-            Build interactive UIs with React.
-          </p>
         </div>
       </div>
 
-      
-      <div className="px-4">
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
-          <div className="relative bg-lightBlue-400 w-32 h-32 mb-4 mt-[-3rem] rounded-full overflow-hidden">
-            <img
-              src={vueImage}
-              alt="Vue Logo"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <h3 className="text-xl font-semibold font-roboto">Vue</h3>
-          <p className="text-gray-500 mt-2 font-roboto">
-            Lightweight and progressive framework for building UIs.
+{/* FAQ Section */}
+<div className="w-full lg:w-6/12 px-12 md:px-4" style={{ height: '550px' }}>
+  <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 h-full">
+    <div className="flex-auto p-5 lg:p-10">
+      <h4 className="text-2xl font-semibold mb-6">FAQs</h4>
+      <div className="mt-4 space-y-20"> {/* Increased vertical spacing here */}
+        
+        {/* Question 1 */}
+        <div className="mb-8"> {/* Added mb-6 for extra spacing */}
+          <h5
+            className="text-lg font-bold cursor-pointer mb-2"
+            onClick={() => toggleAnswer(1)}>
+            What is AlgoSys?
+          </h5>
+          <p className={`text-blueGray-500 mb-4 ${faqIndex === 1 ? '' : 'hidden'}`}>
+            AlgoSys is a comprehensive learning platform that combines theory, practicals, visualizations, and MCQs to help students master Data Structures and Algorithms (DSA).
+          </p>
+        </div>
+
+        {/* Question 2 */}
+        <div className="mb-8">
+          <h5
+            className="text-lg font-bold cursor-pointer mb-2"
+            onClick={() => toggleAnswer(2)} >
+            What kind of learning materials are provided?
+          </h5>
+          <p className={`text-blueGray-500 mb-4 ${faqIndex === 2 ? '' : 'hidden'}`}>
+            We provide detailed theory, interactive visualizations, coding exercises, and multiple-choice questions (MCQs) tailored to help students effectively learn and practice DSA concepts.
+          </p>
+        </div>
+
+        {/* Question 3 */}
+        <div className="mb-8">
+          <h5
+            className="text-lg font-bold cursor-pointer mb-2"
+            onClick={() => toggleAnswer(3)} >
+            How does visualization help in learning DSA?
+          </h5>
+          <p className={`text-blueGray-500 mb-4 ${faqIndex === 3 ? '' : 'hidden'}`}>
+            Visualizations make complex DSA concepts easy to understand by providing intuitive and interactive graphical representations of algorithms and data structures.
+          </p>
+        </div>
+
+        {/* Question 4 */}
+        <div className="mb-8">
+          <h5
+            className="text-lg font-bold cursor-pointer mb-2"
+            onClick={() => toggleAnswer(4)} >
+            Is AlgoSys suitable for beginners?
+          </h5>
+          <p className={`text-blueGray-500 mb-4 ${faqIndex === 4 ? '' : 'hidden'}`}>
+            Yes, AlgoSys is designed for learners at all levels, including beginners. It provides step-by-step explanations, visual aids, and practice problems to build a strong foundation in DSA.
+          </p>
+        </div>
+
+        {/* Question 5 */}
+        <div className="mb-8">
+          <h5
+            className="text-lg font-bold cursor-pointer mb-2"
+            onClick={() => toggleAnswer(5)} >
+            Can I track my progress on AlgoSys?
+          </h5>
+          <p className={`text-blueGray-500 mb-4 ${faqIndex === 5 ? '' : 'hidden'}`}>
+            Absolutely! AlgoSys includes features to monitor your learning progress, practice history, and performance in quizzes and assignments.
           </p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
-      <div className="px-4">
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
-          <div className="relative bg-purple-400 w-32 h-32 mb-4 mt-[-2rem] rounded-full overflow-hidden">
-            <img
-            src={angularImage}
-            alt="Angular Logo"
-            className="w-full h-full object-cover"
-          />
-          </div>
-          <h3 className="text-xl font-semibold font-roboto">Angular</h3>
-          <p className="text-gray-500 mt-2 font-roboto">
-            A modern, fast framework that compiles away at build time.
-          </p>
-        </div>
-      </div>
 
-      
-      <div className="px-4">
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center">
-          <div className="relative bg-purple-400 w-32 h-32 mb-4 mt-[-3rem] rounded-full overflow-hidden">
-            <img
-              src={bootstrapImage}
-              alt="Bootstrap Logo"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <h3 className="text-xl font-semibold font-roboto">Bootstrap</h3>
-          <p className="text-gray-500 mt-2 font-roboto">
-            A modern, fast framework that compiles away at build time.
-          </p>
-        </div>
-      </div>
-
-      
-    </Slider>
+    </div>
   </div>
 </section>
 
-      <section className="py-20 bg-blueGray-600 overflow-hidden">
-        <div className="container mx-auto pb-64">
-          <div className="flex flex-wrap justify-center">
-            <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
-              <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                <i className="fas fa-code-branch text-xl"></i>
-              </div>
-              {/* <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
-                Open Source
-              </h3> */}
-              {/* <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-400">
-                Since{" "}
-                <a
-                  href="https://tailwindcss.com/?ref=creativetim"
-                  className="text-blueGray-300"
-                  target="_blank"
-                >
-                  Tailwind CSS
-                </a>{" "}
-                is an open source project we wanted to continue this movement
-                too. You can give this version a try to feel the design and also
-                test the quality of the code!
-              </p> */}
-              {/* <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-400">
-                Get it free on Github and please help us spread the news with a
-                Star!
-              </p> */}
-              {/* <a
-                href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
-                target="_blank"
-                className="github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
-              >
-                Github Star
-              </a> */}
-            </div>
-            
-            <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
-              <div className="w-full lg:w-6/12 px-4">
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
-                  <div className="flex-auto p-5 lg:p-10">
-                    <h4 className="text-2xl font-semibold">
-                      Want to work with us?
-                    </h4>
-                    <p className="leading-relaxed mt-1 mb-4 text-blueGray-500">
-                      Complete this form and we will get back to you in 24
-                      hours.
-                    </p>
-                    <div className="relative w-full mb-3 mt-8">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="full-name"
-                      >
-                        Full Name
-                      </label>
-                      <input
-                        type="text"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Full Name"
-                      />
-                    </div>
 
-                    <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="email"
-                      >
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Email"
-                      />
-                    </div>
-
-                    <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="message"
-                      >
-                        Message
-                      </label>
-                      <textarea
-                        rows="4"
-                        cols="80"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                        placeholder="Type a message..."
-                      />
-                    </div>
-                    <div className="text-center mt-6">
-                      <button
-                        className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                        type="button"
-                      >
-                        Send Message
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          </div>
-        </div>
-      </section>
+  
       <Footer />
     </>
   )
